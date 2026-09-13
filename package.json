@@ -1,0 +1,13 @@
+{
+  "name": "kidrockmanagementteamsent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker for kidrockmanagementteamsent.com",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.34.0"
+  }
+}
