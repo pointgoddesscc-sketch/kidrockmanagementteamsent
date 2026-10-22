@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KR Management Team | Kid Rock</title>
+  <meta name="description" content="Official management and fan-relations desk for Kid Rock. Driven by passion. Powered by music. Inspired by the fans." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #d4af37;
+      --gold-light: #f0d78c;
+      --ink: #0c0d10;
+      --paper: #f7f4ee;
+      --muted: #a8a29e;
+      --card: #16181d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: Inter, system-ui, sans-serif;
+      line-height: 1.6;
+    }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background:
+        radial-gradient(ellipse at center, rgba(212,175,55,0.08) 0%, transparent 70%),
+        linear-gradient(180deg, #0c0d10 0%, #111318 100%);
+    }
+    .logo-mark {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #000;
+      border: 1px solid rgba(212,175,55,0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 60px rgba(212,175,55,0.15);
+    }
+    .logo-mark .kr {
+      font-family: "Playfair Display", serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .logo-mark .sub {
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .tagline {
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+      color: var(--gold);
+      max-width: 36rem;
+      margin: 1rem auto 2.5rem;
+      font-weight: 500;
+    }
+    .cta-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.85rem 1.6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: #111;
+    }
+    .btn-primary:hover { transform: translateY(-1px); background: var(--gold-light); }
+    .btn-ghost {
+      border: 1px solid rgba(212,175,55,0.5);
+      color: var(--gold);
+    }
+    .btn-ghost:hover { background: rgba(212,175,55,0.08); }
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .lead {
+      text-align: center;
+      color: var(--muted);
+      max-width: 40rem;
+      margin: 0 auto 3rem;
+      font-size: 1.05rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #2a2d35;
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      color: var(--gold-light);
+    }
+    .card p { color: #cfc8bc; font-size: 0.95rem; }
+    footer {
+      border-top: 1px solid #222;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="logo-mark">
+      <div class="kr">KR</div>
+      <div class="sub">Management<br>Team</div>
+    </div>
+    <h1>KR Management Team</h1>
+    <p class="tagline">Driven by passion.<br>Powered by music.<br>Inspired by the fans.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://hub.kidrockmanagementteamsent.com/" target="_blank" rel="noopener">Official Hub</a>
+      <a class="btn btn-ghost" href="https://kidrockmanagement.godaddysites.com" target="_blank" rel="noopener">Contact Desk</a>
+      <a class="btn btn-ghost" href="https://linktr.ee/krmanagementt" target="_blank" rel="noopener">LinkMe</a>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">Supporting the music.<br>Supporting the fans.</h2>
+    <p class="lead">KR Management Team is the dedicated management and fan-relations desk for Kid Rock and the community that has been there through every chapter. A professional desk that answers. Written terms. Published contact.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Fan Relations</h3>
+        <p>Professional correspondence for the community. Messages are reviewed and answered through the contact method you provide.</p>
+      </article>
+      <article class="card">
+        <h3>Meet & Greet</h3>
+        <p>Inquiries are reviewed against availability. Payment only after written confirmation — never assumed access.</p>
+      </article>
+      <article class="card">
+        <h3>Official Destinations</h3>
+        <p>Hub, contact desk, LinkMe, and verified channels. Bookmark only published addresses.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <p>KR Management Team · Kid Rock</p>
+    <p style="margin-top:0.5rem"><a href="https://hub.kidrockmanagementteamsent.com/">hub.kidrockmanagementteamsent.com</a> · <a href="https://kidrock.com">kidrock.com</a></p>
+  </footer>
+</body>
+</html>
