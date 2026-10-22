@@ -93,6 +93,8 @@
       font-weight: 500;
       font-size: 0.95rem;
       transition: transform 0.15s ease, background 0.15s ease;
+      border: none;
+      cursor: pointer;
     }
     .btn-primary {
       background: var(--gold);
@@ -139,6 +141,39 @@
       color: var(--gold-light);
     }
     .card p { color: #cfc8bc; font-size: 0.95rem; }
+    .form-wrap {
+      max-width: 560px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid #2a2d35;
+      border-radius: 16px;
+      padding: 2rem;
+    }
+    label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.35rem;
+      color: var(--gold-light);
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: 1px solid #2a2d35;
+      background: #0c0d10;
+      color: var(--paper);
+      font-family: inherit;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    .form-status {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+    .form-status.success { color: #86efac; }
+    .form-status.error { color: #fca5a5; }
     footer {
       border-top: 1px solid #222;
       padding: 2rem 1.5rem;
@@ -159,7 +194,7 @@
     <p class="tagline">Driven by passion.<br>Powered by music.<br>Inspired by the fans.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://hub.kidrockmanagementteamsent.com/" target="_blank" rel="noopener">Official Hub</a>
-      <a class="btn btn-ghost" href="https://kidrockmanagement.godaddysites.com" target="_blank" rel="noopener">Contact Desk</a>
+      <a class="btn btn-ghost" href="#contact">Contact</a>
       <a class="btn btn-ghost" href="https://linktr.ee/krmanagementt" target="_blank" rel="noopener">LinkMe</a>
     </div>
   </header>
@@ -183,9 +218,77 @@
     </div>
   </section>
 
+  <section id="contact">
+    <h2 class="section-title">Contact the desk</h2>
+    <p class="lead">Send a message. The team reviews correspondence and replies through the contact method you provide.</p>
+    <form class="form-wrap" id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject">
+        <option value="General">General inquiry</option>
+        <option value="Fan relations">Fan relations</option>
+        <option value="Meet and greet">Meet & greet</option>
+        <option value="Media / press">Media / press</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message</button>
+      <div class="form-status" id="form-status"></div>
+    </form>
+  </section>
+
   <footer>
     <p>KR Management Team · Kid Rock</p>
     <p style="margin-top:0.5rem"><a href="https://hub.kidrockmanagementteamsent.com/">hub.kidrockmanagementteamsent.com</a> · <a href="https://kidrock.com">kidrock.com</a></p>
   </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      status.textContent = '';
+      status.className = 'form-status';
+
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value.trim()
+      };
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json();
+        if (res.ok && json.ok) {
+          status.className = 'form-status success';
+          status.textContent = json.message || 'Message sent. Thank you.';
+          e.target.reset();
+        } else {
+          throw new Error(json.error || 'Something went wrong.');
+        }
+      } catch (err) {
+        status.className = 'form-status error';
+        status.textContent = err.message || 'Unable to send. Please try again later.';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+      }
+    });
+  </script>
 </body>
 </html>
