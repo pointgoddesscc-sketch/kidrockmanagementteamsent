@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Desk | KR Management Team</title>
+  <meta name="description" content="Browser-local catalog, order requests, and inquiries."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/"><img src="/logo.jpg" alt="KR mark"/>KR Management</a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <nav class="nav-links"><a href="/">Home</a><a href="/about">About</a><a href="/management">Management</a><a href="/services">Services</a><a href="/news">News</a><a href="/business">Business</a><a href="/store">Store</a><a href="/contact">Contact</a><a href="/cart" data-cart-count>Cart</a></nav>
+  </header>
+  <main><header class="page-hero"><div class="wrap"><p class="kicker">This browser</p><h1>Desk</h1><p class="lede">Records stay on this device. Card payouts are not connected. No test charge has been run.</p></div></header>
+  <section class="section"><div class="wrap">
+    <form id="publish" class="card">
+      <h2>Publish an item</h2>
+      <p class="muted">Only add goods you are authorized to sell, with a real price.</p>
+      <label class="field">Name<input name="name" required/></label>
+      <label class="field">Category<select name="category"><option>Apparel</option><option>Accessories</option><option>Collectibles</option><option>Special editions</option><option>Digital</option></select></label>
+      <label class="field">Price USD<input name="price" type="number" min="0" step="0.01" required/></label>
+      <label class="field">Stock<input name="stock" type="number" min="0" required/></label>
+      <label class="field">Image URL<input name="image" placeholder="/logo.jpg"/></label>
+      <label class="field">Description<textarea name="description" required></textarea></label>
+      <button class="btn btn-gold" type="submit">Publish</button>
+      <div id="product-list"></div>
+    </form>
+    <div class="grid-2" style="margin-top:20px">
+      <form id="ship-form" class="card"><h2>Shipping</h2><label class="field">Name<input name="name" required/></label><label class="field">Price USD<input name="cents" type="number" min="0" step="0.01" required/></label><button class="btn" type="submit">Add rate</button><div id="ship-list"></div></form>
+      <form id="tax-form" class="card"><h2>Tax percent</h2><p class="muted">Leave 0 until a real rate is confirmed.</p><label class="field">Percent<input id="tax-input" name="percent" type="number" min="0" step="0.01" value="0"/></label><button class="btn" type="submit">Save tax</button></form>
+    </div>
+    <h2 style="margin-top:28px">Order requests</h2><div id="order-list"></div>
+    <h2 style="margin-top:28px">Inquiries</h2><div id="inquiry-list"></div>
+    <h2 style="margin-top:28px">Newsletter addresses</h2><ul id="sub-list"></ul>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <h2>KR Management Team</h2>
+        <p class="muted">Published management and fan-relations desk. Do not send passwords, codes, or banking details.</p>
+      </div>
+      <div>
+        <p class="kicker">Visit</p>
+        <a href="/about">About</a><a href="/management">Management</a><a href="/services">Services</a>
+        <a href="/news">News</a><a href="/business">Business</a><a href="/store">Store</a>
+        <a href="/artist-career">Artist</a><a href="/desk">Desk</a>
+      </div>
+      <div>
+        <p class="kicker">Contact</p>
+        <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a>
+        <a href="https://x.com/KidRock" target="_blank" rel="noreferrer">X</a>
+        <a href="https://www.instagram.com/kidrock/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/kidrock" target="_blank" rel="noreferrer">YouTube</a>
+        <a href="/privacy">Privacy</a><a href="/shipping">Shipping</a><a href="/returns">Returns</a>
+      </div>
+    </div>
+    <p class="legal">Artist public profiles are linked as published. This desk does not post as those accounts.</p>
+  </footer>
+  <script src="/site.js"></script>
+</body>
+</html>

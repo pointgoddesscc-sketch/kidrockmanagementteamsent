@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Management | KR Management Team</title>
-  <meta name="description" content="Management functions and departments for KR Management Team." />
-  <link rel="stylesheet" href="/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="How inquiries are routed."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
-  <nav>
-    <a class="nav-brand" href="/">KR MANAGEMENT</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
-    <div class="nav-links">
-      <a href="/">Home</a><a href="/about.html">About</a><a href="/management.html" class="active">Management</a>
-      <a href="/artist-career.html">Artist & Career</a><a href="/business.html">Business</a>
-      <a href="/media.html">Media</a><a href="/news.html">News</a>
-      <a href="/contact.html" class="btn btn-ghost" style="padding:0.45rem 1rem; font-size:0.7rem;">Contact</a>
+  <header class="nav">
+    <a class="brand" href="/"><img src="/logo.jpg" alt="KR mark"/>KR Management</a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <nav class="nav-links"><a href="/">Home</a><a href="/about">About</a><a href="/management" class="active">Management</a><a href="/services">Services</a><a href="/news">News</a><a href="/business">Business</a><a href="/store">Store</a><a href="/contact">Contact</a><a href="/cart" data-cart-count>Cart</a></nav>
+  </header>
+  <main><header class="page-hero"><div class="wrap"><p class="kicker">Structure</p><h1>Management</h1></div></header><section class="section"><div class="wrap">
+    <div class="grid-3">
+      <article class="card"><h3>Career</h3><p class="muted">Routed. Unconfirmed bookings are not announced.</p></article>
+      <article class="card"><h3>Partnerships</h3><p class="muted">A form is not a contract.</p></article>
+      <article class="card"><h3>Publicity</h3><p class="muted">Press replies stay on the published address.</p></article>
+      <article class="card"><h3>Scheduling</h3><p class="muted">Confirmation is written, or it does not exist.</p></article>
+      <article class="card"><h3>Fan relations</h3><p class="muted">Answered through the method you give.</p></article>
     </div>
-  </nav>
-  <header class="page-hero"><div class="section-inner"><p class="label">Functions</p><h1>Management</h1></div></header>
-  <section>
-    <div class="section-inner">
-      <p class="lead">The desk organizes professional work into clear areas. These reflect the inquiries and coordination the team actually handles.</p>
-      <div class="grid-3">
-        <article class="card"><h3>Artist & Career Coordination</h3><p>Support for career-related questions and routing to approved channels.</p><div style="margin-top:1rem;"><a href="/artist-career.html">View →</a></div></article>
-        <article class="card"><h3>Business Development</h3><p>Review of legitimate partnership and commercial proposals.</p><div style="margin-top:1rem;"><a href="/business.html">View →</a></div></article>
-        <article class="card"><h3>Publicity & Media Relations</h3><p>Approved press and media communications.</p><div style="margin-top:1rem;"><a href="/media.html">View →</a></div></article>
-        <article class="card"><h3>Scheduling & Professional Inquiries</h3><p>Professional scheduling requests routed to the appropriate desk.</p></article>
-        <article class="card"><h3>Fan Relations</h3><p>Community correspondence reviewed and answered through published channels.</p></article>
-        <article class="card"><h3>Meet & Greet</h3><p>Availability confirmed in writing before any payment or next step.</p></article>
+    <p class="muted" style="margin-top:24px">No individual manager is named. Adding a name without confirmation would be an invention.</p></div></section></main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <h2>KR Management Team</h2>
+        <p class="muted">Published management and fan-relations desk. Do not send passwords, codes, or banking details.</p>
+      </div>
+      <div>
+        <p class="kicker">Visit</p>
+        <a href="/about">About</a><a href="/management">Management</a><a href="/services">Services</a>
+        <a href="/news">News</a><a href="/business">Business</a><a href="/store">Store</a>
+        <a href="/artist-career">Artist</a><a href="/desk">Desk</a>
+      </div>
+      <div>
+        <p class="kicker">Contact</p>
+        <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a>
+        <a href="https://x.com/KidRock" target="_blank" rel="noreferrer">X</a>
+        <a href="https://www.instagram.com/kidrock/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/kidrock" target="_blank" rel="noreferrer">YouTube</a>
+        <a href="/privacy">Privacy</a><a href="/shipping">Shipping</a><a href="/returns">Returns</a>
       </div>
     </div>
-  </section>
-  <footer>
-    <div class="footer-bottom">KR Management Team · <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a></div>
+    <p class="legal">Artist public profiles are linked as published. This desk does not post as those accounts.</p>
   </footer>
-  <script>document.querySelector('.nav-toggle')?.addEventListener('click',()=>document.querySelector('.nav-links').classList.toggle('open'));</script>
+  <script src="/site.js"></script>
 </body>
 </html>

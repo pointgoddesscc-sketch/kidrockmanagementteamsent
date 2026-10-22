@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Business Inquiries | KR Management Team</title>
-  <meta name="description" content="Business and partnership inquiries for KR Management Team." />
-  <link rel="stylesheet" href="/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="Partnership and commercial requests. A form is not a contract."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
-  <nav>
-    <a class="nav-brand" href="/">KR MANAGEMENT</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
-    <div class="nav-links">
-      <a href="/">Home</a><a href="/about.html">About</a><a href="/management.html">Management</a>
-      <a href="/artist-career.html">Artist & Career</a><a href="/business.html" class="active">Business</a>
-      <a href="/media.html">Media</a><a href="/news.html">News</a>
-      <a href="/contact.html" class="btn btn-ghost" style="padding:0.45rem 1rem; font-size:0.7rem;">Contact</a>
-    </div>
-  </nav>
-  <header class="page-hero"><div class="section-inner"><p class="label">Partnerships</p><h1>Business Inquiries</h1></div></header>
-  <section>
-    <div class="section-inner">
-      <p class="lead">For legitimate partnership proposals, commercial opportunities, and professional business requests. Submissions are reviewed by the desk. Do not send unsolicited payment requests or confidential materials without prior written confirmation.</p>
-      <div class="grid-3">
-        <article class="card"><h3>Commercial Partnerships</h3><p>Brand and commercial proposals routed for review.</p></article>
-        <article class="card"><h3>Collaborations</h3><p>Professional collaboration inquiries reviewed against fit and availability.</p></article>
-        <article class="card"><h3>Other Business</h3><p>Additional commercial requests directed through the published form.</p></article>
+  <header class="nav">
+    <a class="brand" href="/"><img src="/logo.jpg" alt="KR mark"/>KR Management</a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <nav class="nav-links"><a href="/">Home</a><a href="/about">About</a><a href="/management">Management</a><a href="/services">Services</a><a href="/news">News</a><a href="/business" class="active">Business</a><a href="/store">Store</a><a href="/contact">Contact</a><a href="/cart" data-cart-count>Cart</a></nav>
+  </header>
+  <main><header class="page-hero"><div class="wrap"><p class="kicker">Commercial</p><h1>Business inquiries</h1><p class="lede">Silence is not a yes. Do not attach card numbers.</p></div></header>
+  <section class="section"><div class="wrap"><p class="muted">Include who you are, what you are asking, and what you are offering.</p><p><a class="btn btn-gold" href="/contact?category=business">Open the business form</a></p></div></section></main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <h2>KR Management Team</h2>
+        <p class="muted">Published management and fan-relations desk. Do not send passwords, codes, or banking details.</p>
       </div>
-      <div style="margin-top:2rem; text-align:center;">
-        <a class="btn btn-primary" href="/contact.html?category=business">Submit Business Inquiry</a>
+      <div>
+        <p class="kicker">Visit</p>
+        <a href="/about">About</a><a href="/management">Management</a><a href="/services">Services</a>
+        <a href="/news">News</a><a href="/business">Business</a><a href="/store">Store</a>
+        <a href="/artist-career">Artist</a><a href="/desk">Desk</a>
+      </div>
+      <div>
+        <p class="kicker">Contact</p>
+        <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a>
+        <a href="https://x.com/KidRock" target="_blank" rel="noreferrer">X</a>
+        <a href="https://www.instagram.com/kidrock/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/kidrock" target="_blank" rel="noreferrer">YouTube</a>
+        <a href="/privacy">Privacy</a><a href="/shipping">Shipping</a><a href="/returns">Returns</a>
       </div>
     </div>
-  </section>
-  <footer><div class="footer-bottom">KR Management Team · <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a></div></footer>
-  <script>document.querySelector('.nav-toggle')?.addEventListener('click',()=>document.querySelector('.nav-links').classList.toggle('open'));</script>
+    <p class="legal">Artist public profiles are linked as published. This desk does not post as those accounts.</p>
+  </footer>
+  <script src="/site.js"></script>
 </body>
 </html>

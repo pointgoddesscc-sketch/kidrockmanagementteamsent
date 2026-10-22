@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>News & Updates | KR Management Team</title>
-  <meta name="description" content="Verified news and updates from KR Management Team." />
-  <link rel="stylesheet" href="/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>News & Media | KR Management Team</title>
+  <meta name="description" content="Dated announcements from the published album release."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
-  <nav>
-    <a class="nav-brand" href="/">KR MANAGEMENT</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
-    <div class="nav-links">
-      <a href="/">Home</a><a href="/about.html">About</a><a href="/management.html">Management</a>
-      <a href="/artist-career.html">Artist & Career</a><a href="/business.html">Business</a>
-      <a href="/media.html">Media</a><a href="/news.html" class="active">News</a>
-      <a href="/contact.html" class="btn btn-ghost" style="padding:0.45rem 1rem; font-size:0.7rem;">Contact</a>
-    </div>
-  </nav>
-  <header class="page-hero"><div class="section-inner"><p class="label">Verified</p><h1>News & Updates</h1></div></header>
-  <section>
-    <div class="section-inner">
-      <p class="lead">Announcements drawn from publicly released information. No fabricated news is published here.</p>
-      <div class="grid-3">
-        <article class="card">
-          <p class="label">October 17, 2026</p>
-          <h3>Halfway 2 Jesus Released</h3>
-          <p>Kid Rock's 17-track album is available now on Top Dog Records. Stream on Spotify, Apple Music, and Amazon Music.</p>
-          <div style="margin-top:1rem;"><a href="/artist-career.html">View album →</a></div>
-        </article>
-        <article class="card">
-          <p class="label">October 1, 2026</p>
-          <h3>Lead Single Out</h3>
-          <p>"James 1:17 (Jesus Is King)" introduced the album. The video was filmed at Kid Rock's Honky Tonk in Nashville.</p>
-        </article>
-        <article class="card">
-          <p class="label">Features</p>
-          <h3>Guest Appearances</h3>
-          <p>The album includes Lil Wayne on "7 Sins," Eminem on "Heal My Faith," and Gary LeVox & Jimmie Allen on the title track.</p>
-        </article>
+  <header class="nav">
+    <a class="brand" href="/"><img src="/logo.jpg" alt="KR mark"/>KR Management</a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <nav class="nav-links"><a href="/">Home</a><a href="/about">About</a><a href="/management">Management</a><a href="/services">Services</a><a href="/news" class="active">News</a><a href="/business">Business</a><a href="/store">Store</a><a href="/contact">Contact</a><a href="/cart" data-cart-count>Cart</a></nav>
+  </header>
+  <main><header class="page-hero"><div class="wrap"><p class="kicker">Newsroom</p><h1>News & media</h1><p class="lede">If it is not confirmed, it is not a story here.</p></div></header>
+  <section class="section"><div class="wrap grid-3">
+    <article class="card"><p class="kicker">October 17, 2026</p><h3>Halfway 2 Jesus is out</h3><p><a href="/news-halfway">Open</a></p></article>
+    <article class="card"><p class="kicker">October 1, 2026</p><h3>Lead single</h3><p><a href="/news-single">Open</a></p></article>
+    <article class="card"><p class="kicker">Credits</p><h3>Guest appearances</h3><p><a href="/news-features">Open</a></p></article>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <h2>KR Management Team</h2>
+        <p class="muted">Published management and fan-relations desk. Do not send passwords, codes, or banking details.</p>
+      </div>
+      <div>
+        <p class="kicker">Visit</p>
+        <a href="/about">About</a><a href="/management">Management</a><a href="/services">Services</a>
+        <a href="/news">News</a><a href="/business">Business</a><a href="/store">Store</a>
+        <a href="/artist-career">Artist</a><a href="/desk">Desk</a>
+      </div>
+      <div>
+        <p class="kicker">Contact</p>
+        <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a>
+        <a href="https://x.com/KidRock" target="_blank" rel="noreferrer">X</a>
+        <a href="https://www.instagram.com/kidrock/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/kidrock" target="_blank" rel="noreferrer">YouTube</a>
+        <a href="/privacy">Privacy</a><a href="/shipping">Shipping</a><a href="/returns">Returns</a>
       </div>
     </div>
-  </section>
-  <footer><div class="footer-bottom">KR Management Team · <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a></div></footer>
-  <script>document.querySelector('.nav-toggle')?.addEventListener('click',()=>document.querySelector('.nav-links').classList.toggle('open'));</script>
+    <p class="legal">Artist public profiles are linked as published. This desk does not post as those accounts.</p>
+  </footer>
+  <script src="/site.js"></script>
 </body>
 </html>

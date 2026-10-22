@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Media & Press | KR Management Team</title>
-  <meta name="description" content="Media and press resources for KR Management Team." />
-  <link rel="stylesheet" href="/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="Press path, cover, and streaming links."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
-  <nav>
-    <a class="nav-brand" href="/">KR MANAGEMENT</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
-    <div class="nav-links">
-      <a href="/">Home</a><a href="/about.html">About</a><a href="/management.html">Management</a>
-      <a href="/artist-career.html">Artist & Career</a><a href="/business.html">Business</a>
-      <a href="/media.html" class="active">Media</a><a href="/news.html">News</a>
-      <a href="/contact.html" class="btn btn-ghost" style="padding:0.45rem 1rem; font-size:0.7rem;">Contact</a>
-    </div>
-  </nav>
-  <header class="page-hero"><div class="section-inner"><p class="label">Press</p><h1>Media & Press</h1></div></header>
-  <section>
-    <div class="section-inner">
-      <p class="lead">Approved media resources and contact for press inquiries. All materials on this page are drawn from publicly available official sources.</p>
-      <div class="grid-2">
-        <div>
-          <h2 style="font-size:2rem;">Current Album</h2>
-          <p style="margin:1rem 0;">Halfway 2 Jesus — released October 17, 2026 on Top Dog Records. Official cover and streaming links are provided for reference.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://open.spotify.com/album/5qQCGKpe4h1fFZhlYL7W36" target="_blank" rel="noopener">Spotify</a>
-            <a class="btn btn-ghost" href="https://music.apple.com/us/album/halfway-2-jesus/6823035081" target="_blank" rel="noopener">Apple Music</a>
-          </div>
-        </div>
-        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/cc/b5/feccb52b-0b99-794d-46cd-37fd2e436cb5/artwork.jpg/632x632bb.webp" alt="Halfway 2 Jesus official cover" style="border-radius:16px; border:1px solid var(--line);" />
+  <header class="nav">
+    <a class="brand" href="/"><img src="/logo.jpg" alt="KR mark"/>KR Management</a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <nav class="nav-links"><a href="/">Home</a><a href="/about">About</a><a href="/management">Management</a><a href="/services">Services</a><a href="/news" class="active">News</a><a href="/business">Business</a><a href="/store">Store</a><a href="/contact">Contact</a><a href="/cart" data-cart-count>Cart</a></nav>
+  </header>
+  <main><header class="page-hero"><div class="wrap"><p class="kicker">Press</p><h1>Media & press</h1></div></header>
+  <section class="section"><div class="wrap grid-2">
+    <img class="frame" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/cc/b5/feccb52b-0b99-794d-46cd-37fd2e436cb5/artwork.jpg/800x800bb.jpg" alt="Halfway 2 Jesus cover"/>
+    <div><p class="muted">Write support@kidrockmanagementteamsent.com and choose Media. There is no separate press phone.</p>
+    <div class="stack"><a class="btn btn-gold" href="/contact?category=media">Press form</a></div></div>
+  </div></section></main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <h2>KR Management Team</h2>
+        <p class="muted">Published management and fan-relations desk. Do not send passwords, codes, or banking details.</p>
       </div>
-      <div style="margin-top:3rem;">
-        <h2 style="font-size:2rem;">Press Contact</h2>
-        <p style="margin-top:1rem;">For media requests, email <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a> with the subject line beginning "Media:" or use the contact form and select Media / Press.</p>
-        <div style="margin-top:1.5rem;"><a class="btn btn-primary" href="/contact.html?category=media">Media Inquiry</a></div>
+      <div>
+        <p class="kicker">Visit</p>
+        <a href="/about">About</a><a href="/management">Management</a><a href="/services">Services</a>
+        <a href="/news">News</a><a href="/business">Business</a><a href="/store">Store</a>
+        <a href="/artist-career">Artist</a><a href="/desk">Desk</a>
+      </div>
+      <div>
+        <p class="kicker">Contact</p>
+        <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a>
+        <a href="https://x.com/KidRock" target="_blank" rel="noreferrer">X</a>
+        <a href="https://www.instagram.com/kidrock/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/kidrock" target="_blank" rel="noreferrer">YouTube</a>
+        <a href="/privacy">Privacy</a><a href="/shipping">Shipping</a><a href="/returns">Returns</a>
       </div>
     </div>
-  </section>
-  <footer><div class="footer-bottom">KR Management Team · <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a></div></footer>
-  <script>document.querySelector('.nav-toggle')?.addEventListener('click',()=>document.querySelector('.nav-links').classList.toggle('open'));</script>
+    <p class="legal">Artist public profiles are linked as published. This desk does not post as those accounts.</p>
+  </footer>
+  <script src="/site.js"></script>
 </body>
 </html>
