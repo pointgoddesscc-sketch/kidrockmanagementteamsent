@@ -3,159 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KR Management Team | Official Management Desk</title>
-  <meta name="description" content="Official management and fan-relations desk for Kid Rock. Professional correspondence, approved experiences, and published destinations." />
+  <title>KR Management Team | Halfway 2 Jesus</title>
+  <meta name="description" content="Official management desk for Kid Rock. Stream Halfway 2 Jesus, view the tracklist, shop merch, and contact the team at support@kidrockmanagementteamsent.com." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --gold: #c9a227;
-      --gold-bright: #e8c547;
-      --gold-dim: rgba(201,162,39,0.14);
-      --ink: #050607;
-      --ink-2: #0d0f13;
-      --paper: #f6f2ea;
-      --muted: #a39c92;
-      --line: rgba(255,255,255,0.08);
+      --gold: #c9a227; --gold-bright: #e8c547; --gold-dim: rgba(201,162,39,0.14);
+      --ink: #050607; --ink-2: #0d0f13; --paper: #f6f2ea; --muted: #a39c92; --line: rgba(255,255,255,0.08);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      background: var(--ink);
-      color: var(--paper);
-      font-family: Outfit, system-ui, sans-serif;
-      line-height: 1.6;
-    }
-    nav {
-      position: fixed; inset: 0 0 auto 0; z-index: 100;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1rem 5vw;
-      background: rgba(5,6,7,0.75);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-brand {
-      font-family: "Cormorant Garamond", serif;
-      color: var(--gold); text-decoration: none;
-      letter-spacing: 0.16em; font-weight: 600; font-size: 1rem;
-    }
-    .nav-links { display: flex; gap: 1.6rem; }
-    .nav-links a {
-      color: var(--paper); text-decoration: none;
-      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85;
-    }
+    body { background: var(--ink); color: var(--paper); font-family: Outfit, system-ui, sans-serif; line-height: 1.6; }
+    nav { position: fixed; inset: 0 0 auto 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5vw; background: rgba(5,6,7,0.75); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+    .nav-brand { font-family: "Cormorant Garamond", serif; color: var(--gold); text-decoration: none; letter-spacing: 0.16em; font-weight: 600; font-size: 1rem; }
+    .nav-links { display: flex; gap: 1.4rem; align-items: center; }
+    .nav-links a { color: var(--paper); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85; }
     .nav-links a:hover { color: var(--gold-bright); }
-    .hero {
-      min-height: 100vh;
-      background: linear-gradient(180deg, rgba(5,6,7,0.35) 0%, rgba(5,6,7,0.72) 55%, #050607 100%),
-                  url('/hero.jpg') center/cover no-repeat;
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: 0 6vw 6rem;
-      position: relative;
-    }
-    .hero-content { max-width: 820px; }
-    .logo-inline {
-      width: 88px; height: 88px; border-radius: 50%;
-      object-fit: cover; margin-bottom: 1.4rem;
-      border: 1px solid rgba(201,162,39,0.5);
-      box-shadow: 0 0 40px rgba(201,162,39,0.2);
-    }
-    h1 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(3rem, 8vw, 6.2rem);
-      font-weight: 500; line-height: 0.95; letter-spacing: -0.02em;
-    }
-    .tagline {
-      margin: 1.2rem 0 2rem;
-      font-size: clamp(1.05rem, 2vw, 1.3rem);
-      color: var(--gold-bright); max-width: 32rem;
-    }
-    .cta-row { display: flex; gap: 0.7rem; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 0.9rem 1.6rem; border-radius: 999px;
-      text-decoration: none; font-weight: 500; font-size: 0.9rem;
-      transition: all 0.2s ease; border: none; cursor: pointer;
-    }
+    .hero { min-height: 100vh; background: linear-gradient(180deg, rgba(5,6,7,0.35) 0%, rgba(5,6,7,0.72) 55%, #050607 100%), url('/hero.jpg') center/cover no-repeat; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 6vw 6rem; }
+    .hero-content { max-width: 860px; }
+    .logo-inline { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1.2rem; border: 1px solid rgba(201,162,39,0.5); }
+    h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(2.8rem, 7vw, 5.8rem); font-weight: 500; line-height: 0.95; }
+    .tagline { margin: 1rem 0 1.8rem; font-size: clamp(1rem, 2vw, 1.25rem); color: var(--gold-bright); max-width: 34rem; }
+    .cta-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 1.5rem; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: 0.88rem; transition: all 0.2s ease; border: none; cursor: pointer; }
     .btn-primary { background: var(--gold); color: #111; }
     .btn-primary:hover { background: var(--gold-bright); transform: translateY(-1px); }
     .btn-ghost { border: 1px solid rgba(201,162,39,0.5); color: var(--gold-bright); background: rgba(0,0,0,0.35); }
     .btn-ghost:hover { background: var(--gold-dim); }
     section { padding: 5.5rem 6vw; }
     .section-inner { max-width: 1180px; margin: 0 auto; }
-    .label {
-      font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.1rem, 4.5vw, 3.2rem);
-      font-weight: 500; margin-bottom: 1rem;
-    }
-    .lead { color: var(--muted); max-width: 44rem; margin-bottom: 2.5rem; }
-    .split {
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center;
-    }
-    .split img {
-      width: 100%; height: 420px; object-fit: cover; border-radius: 18px;
-      border: 1px solid var(--line);
-    }
-    .grid-3 { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .card {
-      background: var(--ink-2); border: 1px solid var(--line);
-      border-radius: 18px; padding: 1.6rem; transition: border-color 0.2s;
-    }
+    .label { font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(2rem, 4.5vw, 3.1rem); font-weight: 500; margin-bottom: 0.8rem; }
+    .lead { color: var(--muted); max-width: 46rem; margin-bottom: 2rem; }
+    .album-hero { display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: center; }
+    .album-cover { width: 100%; border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .tracklist { list-style: none; margin-top: 1.2rem; }
+    .tracklist li { display: flex; justify-content: space-between; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
+    .tracklist .num { color: var(--gold); width: 1.8rem; }
+    .stream-row { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.4rem; }
+    .grid-3 { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card { background: var(--ink-2); border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem; transition: border-color 0.2s; }
     .card:hover { border-color: rgba(201,162,39,0.4); }
-    .card h3 { font-family: "Cormorant Garamond", serif; font-size: 1.45rem; margin-bottom: 0.4rem; }
-    .card p { color: #d4cdc2; font-size: 0.95rem; }
-    .destinations { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .dest-card {
-      display: block; text-decoration: none; color: inherit;
-      background: linear-gradient(180deg, #15171c, #0c0e12);
-      border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem;
-      transition: all 0.2s ease;
-    }
-    .dest-card:hover { border-color: rgba(201,162,39,0.5); transform: translateY(-2px); }
-    .dest-card strong { display: block; color: var(--gold-bright); margin-bottom: 0.25rem; }
-    .dest-card span { font-size: 0.85rem; color: var(--muted); }
-    .gallery {
-      display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem;
-    }
-    .gallery img {
-      width: 100%; height: 100%; object-fit: cover; border-radius: 16px; border: 1px solid var(--line);
-    }
-    .gallery .tall { height: 520px; }
-    .form-wrap {
-      max-width: 600px; margin: 0 auto;
-      background: var(--ink-2); border: 1px solid var(--line);
-      border-radius: 20px; padding: 2rem;
-    }
-    label {
-      display: block; font-size: 0.75rem; letter-spacing: 0.06em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 0.35rem;
-    }
-    input, textarea, select {
-      width: 100%; padding: 0.85rem 1rem; border-radius: 12px;
-      border: 1px solid var(--line); background: #050607; color: var(--paper);
-      font-family: inherit; font-size: 1rem; margin-bottom: 1rem;
-    }
-    textarea { min-height: 130px; resize: vertical; }
-    .form-status { text-align: center; margin-top: 0.6rem; }
+    .card h3 { font-family: "Cormorant Garamond", serif; font-size: 1.4rem; margin-bottom: 0.3rem; }
+    .card .price { color: var(--gold-bright); font-weight: 600; margin-top: 0.4rem; }
+    .tour-list { display: grid; gap: 0.6rem; }
+    .tour-item { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 1.1rem; background: var(--ink-2); border: 1px solid var(--line); border-radius: 12px; }
+    .form-wrap { max-width: 620px; margin: 0 auto; background: var(--ink-2); border: 1px solid var(--line); border-radius: 20px; padding: 2rem; }
+    label { display: block; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+    input, textarea, select { width: 100%; padding: 0.8rem 1rem; border-radius: 12px; border: 1px solid var(--line); background: #050607; color: var(--paper); font-family: inherit; font-size: 1rem; margin-bottom: 1rem; }
+    textarea { min-height: 120px; resize: vertical; }
+    .form-status { text-align: center; margin-top: 0.5rem; }
     .form-status.success { color: #86efac; }
     .form-status.error { color: #fca5a5; }
-    footer {
-      border-top: 1px solid var(--line); padding: 2.8rem 6vw;
-      text-align: center; color: var(--muted); font-size: 0.85rem;
-    }
-    footer .links { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0.8rem; }
+    .auth-row { display: flex; gap: 0.6rem; justify-content: center; margin-top: 1rem; }
+    footer { border-top: 1px solid var(--line); padding: 2.8rem 6vw; text-align: center; color: var(--muted); font-size: 0.85rem; }
     footer a { color: var(--gold); text-decoration: none; }
-    @media (max-width: 800px) {
+    @media (max-width: 860px) {
       .nav-links { display: none; }
-      .split, .gallery { grid-template-columns: 1fr; }
-      .gallery .tall { height: 280px; }
+      .album-hero { grid-template-columns: 1fr; }
       .hero { padding-bottom: 4rem; }
       section { padding: 4rem 1.2rem; }
+      .tour-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
     }
   </style>
 </head>
@@ -163,104 +73,129 @@
   <nav>
     <a class="nav-brand" href="#">KR MANAGEMENT</a>
     <div class="nav-links">
-      <a href="#about">About</a>
+      <a href="#album">Album</a>
+      <a href="#store">Store</a>
+      <a href="#tour">Tour</a>
       <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#destinations">Destinations</a>
       <a href="#contact">Contact</a>
+      <a href="#account" class="btn btn-ghost" style="padding:0.4rem 0.9rem; font-size:0.72rem;">Sign In</a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-content">
-      <img class="logo-inline" src="/logo.jpg" alt="KR Management emblem" />
-      <h1>KR Management<br>Team</h1>
-      <p class="tagline">Driven by passion. Powered by music. Inspired by the fans.</p>
+      <img class="logo-inline" src="/logo.jpg" alt="KR Management" />
+      <h1>Halfway 2 Jesus<br>is here.</h1>
+      <p class="tagline">Kid Rock's new album. Stream it now. Official management desk for fans, press, and inquiries.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://kidrockmanagement.godaddysites.com" target="_blank" rel="noopener">Contact Desk</a>
-        <a class="btn btn-ghost" href="https://linktr.ee/krmanagementt" target="_blank" rel="noopener">Linktree</a>
-        <a class="btn btn-ghost" href="#destinations">Official Links</a>
+        <a class="btn btn-primary" href="#album">Listen Now</a>
+        <a class="btn btn-ghost" href="https://open.spotify.com/album/5qQCGKpe4h1fFZhlYL7W36" target="_blank" rel="noopener">Spotify</a>
+        <a class="btn btn-ghost" href="https://music.apple.com/us/album/halfway-2-jesus/6823035081" target="_blank" rel="noopener">Apple Music</a>
       </div>
     </div>
   </header>
 
-  <section id="about">
+  <section id="album">
     <div class="section-inner">
-      <div class="split">
+      <div class="album-hero">
+        <img class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/cc/b5/feccb52b-0b99-794d-46cd-37fd2e436cb5/artwork.jpg/632x632bb.webp" alt="Halfway 2 Jesus album cover" />
         <div>
-          <p class="label">The Desk</p>
-          <h2>Supporting the music.<br>Supporting the fans.</h2>
-          <p class="lead">KR Management Team is the dedicated management and fan-relations desk supporting Kid Rock and the community that has been there through every chapter. A professional desk that answers. Written terms. Published contact.</p>
-          <p>Official destinations live on this site, the contact desk, Linktree, and the hub. Bookmark only published addresses.</p>
+          <p class="label">New Album · October 17, 2026</p>
+          <h2>Halfway 2 Jesus</h2>
+          <p class="lead">Seventeen tracks. Features from Lil Wayne, Eminem, Gary LeVox, and Jimmie Allen. Out now on Top Dog Records.</p>
+          <ol class="tracklist">
+            <li><span class="num">1</span> Freedom</li>
+            <li><span class="num">2</span> James 1:17 (Jesus Is King)</li>
+            <li><span class="num">3</span> 7 Sins (feat. Lil Wayne)</li>
+            <li><span class="num">4</span> Why Don't You Look Into Jesus</li>
+            <li><span class="num">5</span> Heal My Faith (feat. Eminem)</li>
+            <li><span class="num">6</span> Water Into Wine</li>
+            <li><span class="num">7</span> Halfway 2 Jesus (feat. Gary LeVox & Jimmie Allen)</li>
+            <li><span class="num">8</span> I Don't Drink The Whiskey Anymore</li>
+            <li><span class="num">9</span> Me and Jesus</li>
+            <li><span class="num">10</span> God Is Good</li>
+            <li><span class="num">11</span> Into The Setting Sun</li>
+            <li><span class="num">12</span> Broken Hearted People</li>
+            <li><span class="num">13</span> 'Til You Can't</li>
+            <li><span class="num">14</span> Why Don't You Look Into Jesus (RIRI Mix)</li>
+            <li><span class="num">15</span> High Road</li>
+            <li><span class="num">16</span> Procession</li>
+            <li><span class="num">17</span> God Bless The USA</li>
+          </ol>
+          <div class="stream-row">
+            <a class="btn btn-primary" href="https://open.spotify.com/album/5qQCGKpe4h1fFZhlYL7W36" target="_blank" rel="noopener">Play on Spotify</a>
+            <a class="btn btn-ghost" href="https://music.apple.com/us/album/halfway-2-jesus/6823035081" target="_blank" rel="noopener">Apple Music</a>
+            <a class="btn btn-ghost" href="https://music.amazon.com/albums/B0HN49RJPL" target="_blank" rel="noopener">Amazon Music</a>
+          </div>
         </div>
-        <img src="/stage.jpg" alt="Stage lighting and instruments" />
+      </div>
+    </div>
+  </section>
+
+  <section id="store" style="background: var(--ink-2);">
+    <div class="section-inner">
+      <p class="label">Official Store</p>
+      <h2>Merch & products</h2>
+      <p class="lead">Official Kid Rock merchandise. Prices shown for reference. Shop the full collection at the official store.</p>
+      <div class="grid-3">
+        <article class="card"><h3>Rock n Roll Tee</h3><p>Classic design on 100% cotton.</p><div class="price">$29.99</div></article>
+        <article class="card"><h3>American Badass Hat</h3><p>Black/white trucker style.</p><div class="price">$29.99</div></article>
+        <article class="card"><h3>Flag Blocks Zip Hoodie</h3><p>Heavyweight black zip hoodie.</p><div class="price">$59.99</div></article>
+        <article class="card"><h3>Born Free Eagle Tee</h3><p>Timeless eagle graphic.</p><div class="price">$24.99</div></article>
+        <article class="card"><h3>American Flag Beer Belt</h3><p>Utility belt for the cooler.</p><div class="price">$29.99</div></article>
+        <article class="card"><h3>Sweet Southern Shot Set</h3><p>Glass set for the bar.</p><div class="price">$24.99</div></article>
+      </div>
+      <div style="margin-top:1.6rem; text-align:center;">
+        <a class="btn btn-primary" href="https://store.kidrock.com/" target="_blank" rel="noopener">Shop Official Store</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tour">
+    <div class="section-inner">
+      <p class="label">On the Road</p>
+      <h2>Shows & tour</h2>
+      <p class="lead">Recent and featured dates from the Freedom 250 Tour and Rock the Country. Check official ticketing for the latest.</p>
+      <div class="tour-list">
+        <div class="tour-item"><div><strong>May 1, 2026</strong> — Dallas, TX<br><span style="color:var(--muted);font-size:0.85rem;">Dos Equis Pavilion · Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
+        <div class="tour-item"><div><strong>May 8–9, 2026</strong> — Raleigh & Charlotte, NC<br><span style="color:var(--muted);font-size:0.85rem;">Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
+        <div class="tour-item"><div><strong>May 15–16, 2026</strong> — St. Louis & Tinley Park<br><span style="color:var(--muted);font-size:0.85rem;">Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
+        <div class="tour-item"><div><strong>June 5–6, 2026</strong> — Holmdel, NJ & Mansfield, MA<br><span style="color:var(--muted);font-size:0.85rem;">Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
+        <div class="tour-item"><div><strong>June 19–20, 2026</strong> — Noblesville, IN & Burgettstown, PA<br><span style="color:var(--muted);font-size:0.85rem;">Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
+        <div class="tour-item"><div><strong>Rock the Country 2026</strong><br><span style="color:var(--muted);font-size:0.85rem;">Multi-city festival dates</span></div><a class="btn btn-ghost" href="https://www.livenation.com/artist/K8vZ9171h80/kid-rock-events" target="_blank" rel="noopener">View Dates</a></div>
       </div>
     </div>
   </section>
 
   <section id="services" style="background: var(--ink-2);">
     <div class="section-inner">
-      <p class="label">What We Handle</p>
+      <p class="label">The Desk</p>
       <h2>Professional management</h2>
       <div class="grid-3">
-        <article class="card">
-          <h3>Fan Relations</h3>
-          <p>Professional correspondence for the community. Messages are reviewed and answered through the contact method you provide.</p>
-        </article>
-        <article class="card">
-          <h3>Meet & Greet</h3>
-          <p>Inquiries reviewed against availability. Payment only after written confirmation — never assumed access.</p>
-        </article>
-        <article class="card">
-          <h3>Media & Inquiries</h3>
-          <p>Approved communications for press, special appearances, and official requests handled with discretion.</p>
-        </article>
+        <article class="card"><h3>Fan Relations</h3><p>Professional correspondence for the community. Reviewed and answered through the contact method you provide.</p></article>
+        <article class="card"><h3>Meet & Greet</h3><p>Inquiries reviewed against availability. Payment only after written confirmation.</p></article>
+        <article class="card"><h3>Media & Press</h3><p>Approved communications for press, appearances, and official requests.</p></article>
       </div>
     </div>
   </section>
 
-  <section id="gallery">
-    <div class="section-inner">
-      <p class="label">Atmosphere</p>
-      <h2>From the stage</h2>
-      <div class="gallery">
-        <img class="tall" src="/hero.jpg" alt="Concert stage with golden lighting" />
-        <img src="/stage.jpg" alt="Instruments under stage lights" />
-      </div>
-    </div>
-  </section>
-
-  <section id="destinations" style="background: var(--ink-2);">
-    <div class="section-inner">
-      <p class="label">Published Destinations</p>
-      <h2>Official links</h2>
-      <p class="lead">Bookmark only the addresses below. If a message sends you elsewhere, do not reply with money, codes, or documents.</p>
-      <div class="destinations">
-        <a class="dest-card" href="https://kidrockmanagement.godaddysites.com" target="_blank" rel="noopener">
-          <strong>Contact Desk</strong>
-          <span>kidrockmanagement.godaddysites.com</span>
-        </a>
-        <a class="dest-card" href="https://linktr.ee/krmanagementt" target="_blank" rel="noopener">
-          <strong>KR Management Linktree</strong>
-          <span>linktr.ee/krmanagementt</span>
-        </a>
-        <a class="dest-card" href="https://link.me/corygierman" target="_blank" rel="noopener">
-          <strong>Cory Gierman</strong>
-          <span>link.me/corygierman</span>
-        </a>
-        <a class="dest-card" href="https://hub.kidrockmanagementteamsent.com/" target="_blank" rel="noopener">
-          <strong>Official Hub</strong>
-          <span>hub.kidrockmanagementteamsent.com</span>
-        </a>
+  <section id="account">
+    <div class="section-inner" style="text-align:center;">
+      <p class="label">Fan Access</p>
+      <h2>Sign in or create an account</h2>
+      <p class="lead" style="margin-left:auto; margin-right:auto;">Get early notices on shows, merch drops, and official updates. Sign in with your email.</p>
+      <div class="auth-row">
+        <a class="btn btn-primary" href="#contact">Sign Up</a>
+        <a class="btn btn-ghost" href="#contact">Sign In</a>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="section-inner">
-      <p class="label" style="text-align:center;">Write the Desk</p>
-      <h2 style="text-align:center;">Contact</h2>
-      <p class="lead" style="text-align:center; margin-left:auto; margin-right:auto;">Send a message. The team reviews correspondence and replies through the contact method you provide.</p>
+      <p class="label" style="text-align:center;">Inquiries</p>
+      <h2 style="text-align:center;">Contact the team</h2>
+      <p class="lead" style="text-align:center; margin-left:auto; margin-right:auto;">Email <a href="mailto:support@kidrockmanagementteamsent.com" style="color:var(--gold-bright);">support@kidrockmanagementteamsent.com</a> or send a message below. The desk reviews and replies through the contact method you provide.</p>
       <form class="form-wrap" id="contact-form">
         <label for="name">Name</label>
         <input type="text" id="name" required />
@@ -269,8 +204,10 @@
         <label for="subject">Subject</label>
         <select id="subject">
           <option>General inquiry</option>
+          <option>Album / streaming</option>
+          <option>Merch / store</option>
+          <option>Tour / tickets</option>
           <option>Fan relations</option>
-          <option>Meet & greet</option>
           <option>Media / press</option>
           <option>Other</option>
         </select>
@@ -283,13 +220,9 @@
   </section>
 
   <footer>
-    <div class="links">
-      <a href="https://kidrockmanagement.godaddysites.com" target="_blank" rel="noopener">Contact Desk</a>
-      <a href="https://linktr.ee/krmanagementt" target="_blank" rel="noopener">Linktree</a>
-      <a href="https://link.me/corygierman" target="_blank" rel="noopener">Cory Gierman</a>
-      <a href="https://hub.kidrockmanagementteamsent.com/" target="_blank" rel="noopener">Hub</a>
-    </div>
     <p>KR Management Team · Official Management Desk</p>
+    <p style="margin-top:0.4rem;">Inquiries: <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a></p>
+    <p style="margin-top:0.6rem; font-size:0.75rem;">Halfway 2 Jesus © 2026 Top Dog Records</p>
   </footer>
 
   <script>
@@ -318,7 +251,7 @@
         } else throw new Error(json.error || 'Something went wrong.');
       } catch (err) {
         status.className = 'form-status error';
-        status.textContent = err.message || 'Unable to send. Please try again later.';
+        status.textContent = err.message || 'Unable to send. Email support@kidrockmanagementteamsent.com directly.';
       } finally {
         btn.disabled = false; btn.textContent = 'Send message';
       }
