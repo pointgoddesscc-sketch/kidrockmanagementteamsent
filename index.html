@@ -3,258 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KR Management Team | Halfway 2 Jesus</title>
-  <meta name="description" content="Official management desk for Kid Rock. Stream Halfway 2 Jesus, view the tracklist, shop merch, and contact the team at support@kidrockmanagementteamsent.com." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Kid Rock Management Team | Artist Representation</title>
+  <meta name="description" content="Official management desk for Kid Rock. Artist representation, strategic coordination, and professional inquiries." />
+  <meta property="og:title" content="Kid Rock Management Team" />
+  <meta property="og:description" content="Artist Representation. Strategic Vision. Entertainment Excellence." />
+  <link rel="stylesheet" href="/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --gold: #c9a227; --gold-bright: #e8c547; --gold-dim: rgba(201,162,39,0.14);
-      --ink: #050607; --ink-2: #0d0f13; --paper: #f6f2ea; --muted: #a39c92; --line: rgba(255,255,255,0.08);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--ink); color: var(--paper); font-family: Outfit, system-ui, sans-serif; line-height: 1.6; }
-    nav { position: fixed; inset: 0 0 auto 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5vw; background: rgba(5,6,7,0.75); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
-    .nav-brand { font-family: "Cormorant Garamond", serif; color: var(--gold); text-decoration: none; letter-spacing: 0.16em; font-weight: 600; font-size: 1rem; }
-    .nav-links { display: flex; gap: 1.4rem; align-items: center; }
-    .nav-links a { color: var(--paper); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85; }
-    .nav-links a:hover { color: var(--gold-bright); }
-    .hero { min-height: 100vh; background: linear-gradient(180deg, rgba(5,6,7,0.35) 0%, rgba(5,6,7,0.72) 55%, #050607 100%), url('/hero.jpg') center/cover no-repeat; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 6vw 6rem; }
-    .hero-content { max-width: 860px; }
-    .logo-inline { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1.2rem; border: 1px solid rgba(201,162,39,0.5); }
-    h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(2.8rem, 7vw, 5.8rem); font-weight: 500; line-height: 0.95; }
-    .tagline { margin: 1rem 0 1.8rem; font-size: clamp(1rem, 2vw, 1.25rem); color: var(--gold-bright); max-width: 34rem; }
-    .cta-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 1.5rem; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: 0.88rem; transition: all 0.2s ease; border: none; cursor: pointer; }
-    .btn-primary { background: var(--gold); color: #111; }
-    .btn-primary:hover { background: var(--gold-bright); transform: translateY(-1px); }
-    .btn-ghost { border: 1px solid rgba(201,162,39,0.5); color: var(--gold-bright); background: rgba(0,0,0,0.35); }
-    .btn-ghost:hover { background: var(--gold-dim); }
-    section { padding: 5.5rem 6vw; }
-    .section-inner { max-width: 1180px; margin: 0 auto; }
-    .label { font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
-    h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(2rem, 4.5vw, 3.1rem); font-weight: 500; margin-bottom: 0.8rem; }
-    .lead { color: var(--muted); max-width: 46rem; margin-bottom: 2rem; }
-    .album-hero { display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: center; }
-    .album-cover { width: 100%; border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
-    .tracklist { list-style: none; margin-top: 1.2rem; }
-    .tracklist li { display: flex; justify-content: space-between; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
-    .tracklist .num { color: var(--gold); width: 1.8rem; }
-    .stream-row { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.4rem; }
-    .grid-3 { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-    .card { background: var(--ink-2); border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem; transition: border-color 0.2s; }
-    .card:hover { border-color: rgba(201,162,39,0.4); }
-    .card h3 { font-family: "Cormorant Garamond", serif; font-size: 1.4rem; margin-bottom: 0.3rem; }
-    .card .price { color: var(--gold-bright); font-weight: 600; margin-top: 0.4rem; }
-    .tour-list { display: grid; gap: 0.6rem; }
-    .tour-item { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 1.1rem; background: var(--ink-2); border: 1px solid var(--line); border-radius: 12px; }
-    .form-wrap { max-width: 620px; margin: 0 auto; background: var(--ink-2); border: 1px solid var(--line); border-radius: 20px; padding: 2rem; }
-    label { display: block; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
-    input, textarea, select { width: 100%; padding: 0.8rem 1rem; border-radius: 12px; border: 1px solid var(--line); background: #050607; color: var(--paper); font-family: inherit; font-size: 1rem; margin-bottom: 1rem; }
-    textarea { min-height: 120px; resize: vertical; }
-    .form-status { text-align: center; margin-top: 0.5rem; }
-    .form-status.success { color: #86efac; }
-    .form-status.error { color: #fca5a5; }
-    .auth-row { display: flex; gap: 0.6rem; justify-content: center; margin-top: 1rem; }
-    footer { border-top: 1px solid var(--line); padding: 2.8rem 6vw; text-align: center; color: var(--muted); font-size: 0.85rem; }
-    footer a { color: var(--gold); text-decoration: none; }
-    @media (max-width: 860px) {
-      .nav-links { display: none; }
-      .album-hero { grid-template-columns: 1fr; }
-      .hero { padding-bottom: 4rem; }
-      section { padding: 4rem 1.2rem; }
-      .tour-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
-    }
-  </style>
 </head>
 <body>
   <nav>
-    <a class="nav-brand" href="#">KR MANAGEMENT</a>
+    <a class="nav-brand" href="/">KR MANAGEMENT</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
     <div class="nav-links">
-      <a href="#album">Album</a>
-      <a href="#store">Store</a>
-      <a href="#tour">Tour</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="#account" class="btn btn-ghost" style="padding:0.4rem 0.9rem; font-size:0.72rem;">Sign In</a>
+      <a href="/" class="active">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/management.html">Management</a>
+      <a href="/artist-career.html">Artist & Career</a>
+      <a href="/business.html">Business</a>
+      <a href="/media.html">Media</a>
+      <a href="/news.html">News</a>
+      <a href="/contact.html" class="btn btn-ghost" style="padding:0.45rem 1rem; font-size:0.7rem;">Contact</a>
     </div>
   </nav>
 
   <header class="hero">
-    <div class="hero-content">
-      <img class="logo-inline" src="/logo.jpg" alt="KR Management" />
-      <h1>Halfway 2 Jesus<br>is here.</h1>
-      <p class="tagline">Kid Rock's new album. Stream it now. Official management desk for fans, press, and inquiries.</p>
+    <div class="hero-inner">
+      <p class="label">Official Management Desk</p>
+      <h1>KID ROCK<br>MANAGEMENT</h1>
+      <p class="sub">Artist Representation. Strategic Vision. Entertainment Excellence.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#album">Listen Now</a>
-        <a class="btn btn-ghost" href="https://open.spotify.com/album/5qQCGKpe4h1fFZhlYL7W36" target="_blank" rel="noopener">Spotify</a>
-        <a class="btn btn-ghost" href="https://music.apple.com/us/album/halfway-2-jesus/6823035081" target="_blank" rel="noopener">Apple Music</a>
+        <a class="btn btn-primary" href="/management.html">Explore Management</a>
+        <a class="btn btn-ghost" href="/business.html">Business Inquiries</a>
       </div>
     </div>
   </header>
 
-  <section id="album">
+  <section>
     <div class="section-inner">
-      <div class="album-hero">
-        <img class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/cc/b5/feccb52b-0b99-794d-46cd-37fd2e436cb5/artwork.jpg/632x632bb.webp" alt="Halfway 2 Jesus album cover" />
+      <p class="label">The Organization</p>
+      <h2>About the Management Team</h2>
+      <div class="grid-2">
         <div>
-          <p class="label">New Album · October 17, 2026</p>
-          <h2>Halfway 2 Jesus</h2>
-          <p class="lead">Seventeen tracks. Features from Lil Wayne, Eminem, Gary LeVox, and Jimmie Allen. Out now on Top Dog Records.</p>
-          <ol class="tracklist">
-            <li><span class="num">1</span> Freedom</li>
-            <li><span class="num">2</span> James 1:17 (Jesus Is King)</li>
-            <li><span class="num">3</span> 7 Sins (feat. Lil Wayne)</li>
-            <li><span class="num">4</span> Why Don't You Look Into Jesus</li>
-            <li><span class="num">5</span> Heal My Faith (feat. Eminem)</li>
-            <li><span class="num">6</span> Water Into Wine</li>
-            <li><span class="num">7</span> Halfway 2 Jesus (feat. Gary LeVox & Jimmie Allen)</li>
-            <li><span class="num">8</span> I Don't Drink The Whiskey Anymore</li>
-            <li><span class="num">9</span> Me and Jesus</li>
-            <li><span class="num">10</span> God Is Good</li>
-            <li><span class="num">11</span> Into The Setting Sun</li>
-            <li><span class="num">12</span> Broken Hearted People</li>
-            <li><span class="num">13</span> 'Til You Can't</li>
-            <li><span class="num">14</span> Why Don't You Look Into Jesus (RIRI Mix)</li>
-            <li><span class="num">15</span> High Road</li>
-            <li><span class="num">16</span> Procession</li>
-            <li><span class="num">17</span> God Bless The USA</li>
-          </ol>
-          <div class="stream-row">
-            <a class="btn btn-primary" href="https://open.spotify.com/album/5qQCGKpe4h1fFZhlYL7W36" target="_blank" rel="noopener">Play on Spotify</a>
-            <a class="btn btn-ghost" href="https://music.apple.com/us/album/halfway-2-jesus/6823035081" target="_blank" rel="noopener">Apple Music</a>
-            <a class="btn btn-ghost" href="https://music.amazon.com/albums/B0HN49RJPL" target="_blank" rel="noopener">Amazon Music</a>
-          </div>
+          <p class="lead">KR Management Team is the dedicated management and fan-relations desk supporting Kid Rock and the community that has followed the music through every chapter. The desk handles professional correspondence, coordinates approved inquiries, and maintains published contact channels.</p>
+          <p>We operate with written terms, clear routing of requests, and a commitment to responding through the contact method you provide. Only verified destinations are published on this site.</p>
+          <div style="margin-top:1.5rem;"><a class="btn btn-ghost" href="/about.html">Learn more</a></div>
         </div>
+        <img src="/stage.jpg" alt="Stage lighting" style="border-radius:16px; height:360px; object-fit:cover; border:1px solid var(--line);" />
       </div>
     </div>
   </section>
 
-  <section id="store" style="background: var(--ink-2);">
+  <section style="background:var(--charcoal);">
     <div class="section-inner">
-      <p class="label">Official Store</p>
-      <h2>Merch & products</h2>
-      <p class="lead">Official Kid Rock merchandise. Prices shown for reference. Shop the full collection at the official store.</p>
+      <p class="label">Services</p>
+      <h2>Management Services</h2>
       <div class="grid-3">
-        <article class="card"><h3>Rock n Roll Tee</h3><p>Classic design on 100% cotton.</p><div class="price">$29.99</div></article>
-        <article class="card"><h3>American Badass Hat</h3><p>Black/white trucker style.</p><div class="price">$29.99</div></article>
-        <article class="card"><h3>Flag Blocks Zip Hoodie</h3><p>Heavyweight black zip hoodie.</p><div class="price">$59.99</div></article>
-        <article class="card"><h3>Born Free Eagle Tee</h3><p>Timeless eagle graphic.</p><div class="price">$24.99</div></article>
-        <article class="card"><h3>American Flag Beer Belt</h3><p>Utility belt for the cooler.</p><div class="price">$29.99</div></article>
-        <article class="card"><h3>Sweet Southern Shot Set</h3><p>Glass set for the bar.</p><div class="price">$24.99</div></article>
-      </div>
-      <div style="margin-top:1.6rem; text-align:center;">
-        <a class="btn btn-primary" href="https://store.kidrock.com/" target="_blank" rel="noopener">Shop Official Store</a>
+        <article class="card"><h3>Artist & Career Coordination</h3><p>Professional support for career-related inquiries and coordination with approved channels.</p></article>
+        <article class="card"><h3>Business Development</h3><p>Review of legitimate partnership proposals and commercial opportunities.</p></article>
+        <article class="card"><h3>Publicity & Media Relations</h3><p>Approved communications for press, announcements, and media requests.</p></article>
+        <article class="card"><h3>Scheduling & Professional Inquiries</h3><p>Routing of scheduling and professional requests to the appropriate desk.</p></article>
+        <article class="card"><h3>Fan Relations</h3><p>Correspondence for the community, reviewed and answered professionally.</p></article>
+        <article class="card"><h3>Meet & Greet Inquiries</h3><p>Availability reviewed in writing. Payment only after confirmed terms.</p></article>
       </div>
     </div>
   </section>
 
-  <section id="tour">
+  <section>
     <div class="section-inner">
-      <p class="label">On the Road</p>
-      <h2>Shows & tour</h2>
-      <p class="lead">Recent and featured dates from the Freedom 250 Tour and Rock the Country. Check official ticketing for the latest.</p>
-      <div class="tour-list">
-        <div class="tour-item"><div><strong>May 1, 2026</strong> — Dallas, TX<br><span style="color:var(--muted);font-size:0.85rem;">Dos Equis Pavilion · Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
-        <div class="tour-item"><div><strong>May 8–9, 2026</strong> — Raleigh & Charlotte, NC<br><span style="color:var(--muted);font-size:0.85rem;">Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
-        <div class="tour-item"><div><strong>May 15–16, 2026</strong> — St. Louis & Tinley Park<br><span style="color:var(--muted);font-size:0.85rem;">Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
-        <div class="tour-item"><div><strong>June 5–6, 2026</strong> — Holmdel, NJ & Mansfield, MA<br><span style="color:var(--muted);font-size:0.85rem;">Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
-        <div class="tour-item"><div><strong>June 19–20, 2026</strong> — Noblesville, IN & Burgettstown, PA<br><span style="color:var(--muted);font-size:0.85rem;">Freedom 250 Tour</span></div><a class="btn btn-ghost" href="https://www.ticketmaster.com/kid-rock-tickets/artist/742673" target="_blank" rel="noopener">Tickets</a></div>
-        <div class="tour-item"><div><strong>Rock the Country 2026</strong><br><span style="color:var(--muted);font-size:0.85rem;">Multi-city festival dates</span></div><a class="btn btn-ghost" href="https://www.livenation.com/artist/K8vZ9171h80/kid-rock-events" target="_blank" rel="noopener">View Dates</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" style="background: var(--ink-2);">
-    <div class="section-inner">
-      <p class="label">The Desk</p>
-      <h2>Professional management</h2>
+      <p class="label">Latest</p>
+      <h2>News & Updates</h2>
       <div class="grid-3">
-        <article class="card"><h3>Fan Relations</h3><p>Professional correspondence for the community. Reviewed and answered through the contact method you provide.</p></article>
-        <article class="card"><h3>Meet & Greet</h3><p>Inquiries reviewed against availability. Payment only after written confirmation.</p></article>
-        <article class="card"><h3>Media & Press</h3><p>Approved communications for press, appearances, and official requests.</p></article>
+        <article class="card">
+          <p class="label">October 17, 2026</p>
+          <h3>Halfway 2 Jesus Released</h3>
+          <p>Kid Rock's 17-track album is out now on Top Dog Records. Features include Lil Wayne, Eminem, Gary LeVox, and Jimmie Allen.</p>
+          <div style="margin-top:1rem;"><a href="/news.html">Read more →</a></div>
+        </article>
+        <article class="card">
+          <p class="label">Streaming</p>
+          <h3>Listen Now</h3>
+          <p>Available on Spotify, Apple Music, and Amazon Music.</p>
+          <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <a class="btn btn-primary" style="padding:0.5rem 1rem; font-size:0.8rem;" href="https://open.spotify.com/album/5qQCGKpe4h1fFZhlYL7W36" target="_blank" rel="noopener">Spotify</a>
+            <a class="btn btn-ghost" style="padding:0.5rem 1rem; font-size:0.8rem;" href="https://music.apple.com/us/album/halfway-2-jesus/6823035081" target="_blank" rel="noopener">Apple Music</a>
+          </div>
+        </article>
+        <article class="card">
+          <p class="label">Official</p>
+          <h3>Merch & Store</h3>
+          <p>Official merchandise is available through the artist's store.</p>
+          <div style="margin-top:1rem;"><a class="btn btn-ghost" href="https://store.kidrock.com/" target="_blank" rel="noopener">Visit Store</a></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="account">
+  <section style="background:var(--charcoal);">
     <div class="section-inner" style="text-align:center;">
-      <p class="label">Fan Access</p>
-      <h2>Sign in or create an account</h2>
-      <p class="lead" style="margin-left:auto; margin-right:auto;">Get early notices on shows, merch drops, and official updates. Sign in with your email.</p>
-      <div class="auth-row">
-        <a class="btn btn-primary" href="#contact">Sign Up</a>
-        <a class="btn btn-ghost" href="#contact">Sign In</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="section-inner">
-      <p class="label" style="text-align:center;">Inquiries</p>
-      <h2 style="text-align:center;">Contact the team</h2>
-      <p class="lead" style="text-align:center; margin-left:auto; margin-right:auto;">Email <a href="mailto:support@kidrockmanagementteamsent.com" style="color:var(--gold-bright);">support@kidrockmanagementteamsent.com</a> or send a message below. The desk reviews and replies through the contact method you provide.</p>
-      <form class="form-wrap" id="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" required />
-        <label for="email">Email</label>
-        <input type="email" id="email" required />
-        <label for="subject">Subject</label>
-        <select id="subject">
-          <option>General inquiry</option>
-          <option>Album / streaming</option>
-          <option>Merch / store</option>
-          <option>Tour / tickets</option>
-          <option>Fan relations</option>
-          <option>Media / press</option>
-          <option>Other</option>
-        </select>
-        <label for="message">Message</label>
-        <textarea id="message" required></textarea>
-        <button type="submit" class="btn btn-primary" style="width:100%;">Send message</button>
-        <div class="form-status" id="form-status"></div>
-      </form>
+      <p class="label">Inquiries</p>
+      <h2>Contact the Team</h2>
+      <p class="lead" style="margin-left:auto; margin-right:auto;">For business, media, or general inquiries, write the desk at <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a> or use the form.</p>
+      <a class="btn btn-primary" href="/contact.html">Send an Inquiry</a>
     </div>
   </section>
 
   <footer>
-    <p>KR Management Team · Official Management Desk</p>
-    <p style="margin-top:0.4rem;">Inquiries: <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a></p>
-    <p style="margin-top:0.6rem; font-size:0.75rem;">Halfway 2 Jesus © 2026 Top Dog Records</p>
+    <div class="footer-grid">
+      <div>
+        <h4>KR Management Team</h4>
+        <p>Official management and fan-relations desk. Professional correspondence only through published channels.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="/about.html">About</a>
+        <a href="/management.html">Management</a>
+        <a href="/artist-career.html">Artist & Career</a>
+        <a href="/business.html">Business</a>
+        <a href="/media.html">Media</a>
+        <a href="/news.html">News</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:support@kidrockmanagementteamsent.com">support@kidrockmanagementteamsent.com</a>
+        <a href="https://store.kidrock.com/" target="_blank" rel="noopener">Official Store</a>
+      </div>
+    </div>
+    <div class="footer-bottom">KR Management Team · Official Management Desk</div>
   </footer>
 
   <script>
-    document.getElementById('contact-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const status = document.getElementById('form-status');
-      const btn = e.target.querySelector('button');
-      btn.disabled = true; btn.textContent = 'Sending…';
-      status.className = 'form-status'; status.textContent = '';
-      try {
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: document.getElementById('name').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value.trim()
-          })
-        });
-        const json = await res.json();
-        if (res.ok && json.ok) {
-          status.className = 'form-status success';
-          status.textContent = json.message || 'Message received. Thank you.';
-          e.target.reset();
-        } else throw new Error(json.error || 'Something went wrong.');
-      } catch (err) {
-        status.className = 'form-status error';
-        status.textContent = err.message || 'Unable to send. Email support@kidrockmanagementteamsent.com directly.';
-      } finally {
-        btn.disabled = false; btn.textContent = 'Send message';
-      }
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
     });
   </script>
 </body>
