@@ -3,6 +3,7 @@ name: Daily independent editorial source digest
 on:
   push:
     branches:
+      - main
       - safety/independent-editorial-desk
   schedule:
     - cron: "0 13 * * *"
