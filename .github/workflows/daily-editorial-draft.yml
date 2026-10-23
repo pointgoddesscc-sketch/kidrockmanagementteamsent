@@ -1,0 +1,95 @@
+name: Daily independent editorial source digest
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: daily-editorial-digest
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch public news results and build a review draft
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import datetime, html, urllib.parse, urllib.request
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+          query = urllib.parse.quote('Kid Rock')
+          url = f'https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en'
+          lines = [
+              f'# Daily editorial source draft — {today} (UTC)', '',
+              '> Draft only. Not an official artist statement. Verify every item at its original source before publishing.', '',
+              '## Candidate source links', ''
+          ]
+          try:
+              req = urllib.request.Request(url, headers={'User-Agent': 'OrgSuite-Editorial-Draft/1.0'})
+              with urllib.request.urlopen(req, timeout=20) as response:
+                  data = response.read()
+              root = ET.fromstring(data)
+              items = root.findall('./channel/item')[:10]
+              if not items:
+                  lines.append('No results were returned. Manually check official channels and reputable reporting.')
+              for item in items:
+                  title = html.unescape((item.findtext('title') or 'Untitled').strip())
+                  link = (item.findtext('link') or '').strip()
+                  pub = (item.findtext('pubDate') or 'Publication date not provided').strip()
+                  source = (item.findtext('source') or '').strip()
+                  if link.startswith('https://'):
+                      lines += [f'- **{title}**', f'  - Source: {link}', f'  - Published: {pub}', f'  - Publisher: {source or "Check source page"}', '']
+          except Exception as exc:
+              lines += [f'Feed retrieval failed: {type(exc).__name__}.', 'Manually review official public channels and reputable outlets; do not publish unsupported claims.']
+          lines += [
+              '## Human review checklist',
+              '- [ ] Open each original source and confirm it supports the headline.',
+              '- [ ] Check publication date and whether the information is still current.',
+              '- [ ] Remove rumours, duplicates, misleading framing, and unsupported claims.',
+              '- [ ] Keep opinion distinct from verified facts.',
+              '- [ ] Confirm image rights and platform rules.',
+              '- [ ] Add a clear independent fan/editorial disclosure.',
+              '- [ ] Publish manually only to accounts you own or are authorized to manage.',
+              '',
+              'This workflow does not log in to or post to social accounts.'
+          ]
+          Path('daily-editorial-draft.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          print(f'Created daily-editorial-draft.md for {today}')
+          PY
+      - name: Publish draft as a downloadable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-editorial-draft
+          path: daily-editorial-draft.md
+          if-no-files-found: error
+          retention-days: 14
+      - name: Open a review issue without duplicating today's issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          DAY="$(date -u +%F)"
+          TITLE="Daily editorial review — ${DAY}"
+          if gh issue list --repo "$GH_REPO" --state all --search "\"$TITLE\"" --json title --jq '.[].title' | grep -Fxq "$TITLE"; then
+            echo "Review issue already exists for ${DAY}; skipping duplicate."
+            exit 0
+          fi
+          cat > issue-body.md <<'EOF'
+          The scheduled workflow created a source-link draft artifact for human review.
+
+          Before publishing, verify each original source, confirm dates, remove unsupported claims, check image rights, and retain the independent fan/editorial disclosure.
+
+          This issue does not indicate that any post was published. Social accounts are not connected by this workflow.
+          EOF
+          gh issue create --repo "$GH_REPO" --title "$TITLE" --body-file issue-body.md
