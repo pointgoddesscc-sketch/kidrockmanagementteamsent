@@ -1,5 +1,97 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/management",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/services",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/business",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/store",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/cart",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/checkout",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/meet-and-greet",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/contact",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/artist-career",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/desk",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/news-halfway",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/news-single",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/news-features",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/privacy",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/shipping",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/returns",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/news",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
 }
