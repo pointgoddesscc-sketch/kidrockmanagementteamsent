@@ -47,6 +47,51 @@
       "source": "/about",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/artist-career",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/desk",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/news-halfway",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/news-single",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/news-features",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/privacy",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/shipping",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/returns",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/news",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }
